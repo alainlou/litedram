@@ -539,7 +539,7 @@ class M12L16161A(SDRModule):
 # couldn't find at all: tWTR, tRFC
 # maybe tWR = tRP (precharge time), makes sense as a pattern
 # pretty sure: tRAS = "row active time"
-class HY57V641620FTP-7(SDRModule):
+class HY57V641620FTP(SDRModule):
     # geometry
     nbanks = 4
     nrows  = 4096 # from 12 bit row_addr
