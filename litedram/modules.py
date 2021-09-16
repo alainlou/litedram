@@ -542,7 +542,7 @@ class HY57V641620FTP(SDRModule):
     ncols  = 256
     # timings
     technology_timings = _TechnologyTimings(tREFI=64e6/4096, tWTR=(2, None), tCCD=(1, None), tRRD=(None, 14))
-    speedgrade_timings = {"default": _SpeedgradeTimings(tRP=20, tRCD=20, tWR=15, tRFC=(None, 66), tFAW=None, tRAS=42)}
+    speedgrade_timings = {"default": _SpeedgradeTimings(tRP=20, tRCD=20, tWR=20, tRFC=(None, 66), tFAW=None, tRAS=42)}
 
 # DDR ----------------------------------------------------------------------------------------------
 
