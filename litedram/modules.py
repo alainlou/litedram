@@ -535,17 +535,12 @@ class M12L16161A(SDRModule):
     technology_timings = _TechnologyTimings(tREFI=64e6/4096, tWTR=(2, None), tCCD=(1, None), tRRD=(None, 10))
     speedgrade_timings = {"default": _SpeedgradeTimings(tRP=15, tRCD=15, tWR=15, tRFC=(None, 55), tFAW=None, tRAS=40)}
 
-# https://www.datasheets360.com/pdf/8926917598108841422
-# couldn't find at all: tWTR, tRFC
-# maybe tWR = tRP (precharge time), makes sense as a pattern
-# pretty sure: tRAS = "row active time"
 class HY57V641620FTP(SDRModule):
     # geometry
     nbanks = 4
-    nrows  = 4096 # from 12 bit row_addr
-    ncols  = 256 # from 8 bit col_addr
+    nrows  = 4096
+    ncols  = 256
     # timings
-    # tREFI taking as "tREF" (refresh time)
     technology_timings = _TechnologyTimings(tREFI=64e6/4096, tWTR=(2, None), tCCD=(1, None), tRRD=(None, 14))
     speedgrade_timings = {"default": _SpeedgradeTimings(tRP=20, tRCD=20, tWR=15, tRFC=(None, 66), tFAW=None, tRAS=42)}
 
